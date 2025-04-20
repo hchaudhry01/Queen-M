@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queen M</title>
+  <style>
+    body {
+      background-color: #ffeef8;
+      font-family: 'Georgia', serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffc0cb;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .blast {
+      background: #fff5fb;
+      border-left: 6px solid #ff69b4;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+    }
+    .blast strong {
+      color: #c71585;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .photos img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #999;
+    }
+    #lockscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffeef8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    #lockscreen input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ff69b4;
+      margin-top: 1rem;
+    }
+    #lockscreen button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #ffc0cb;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="lockscreen">
+    <h2>This site is private 💖</h2>
+    <p>Enter the password to continue</p>
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="unlockSite()">Enter</button>
+  </div>
+
+  <div id="content" style="display:none;">
+    <header>
+      Queen M 💕 XOXO
+    </header>
+    <div class="container">
+      <p style="font-style: italic; font-size: 1.2rem; margin-bottom: 2rem;">Hey Upper East Side. Gossip Girl here and word on the street is that Queen M has captured more than just the spotlight. With every step she takes, hearts flutter, cameras flash, and necks crack. This one is for her eyes only. XOXO 💋</p>
+      <div class="blast">
+        <strong>Spotted:</strong> Queen M looking as beautiful as ever, like the world is her runway.
+      </div>
+      <div class="blast">
+        <strong>Rumor has it:</strong> Someone’s heart is no longer his own — she stole it with one look and never gave it back.
+      </div>
+      <div class="blast">
+        <strong>XOXO:</strong> Sources confirm: she’s not just beautiful… she’s unforgettable.
+      </div>
+      <div class="blast">
+        <strong>Sweet Scoop:</strong> He swears the world got brighter the moment she walked into his life. Coincidence? Not likely.
+      </div>
+
+      <div class="photos">
+        <img src="photo1.jpg" alt="Queen M photo 1">
+        <img src="photo2.jpg" alt="Queen M photo 2">
+        <img src="photo3.jpg" alt="Queen M photo 3">
+        <img src="photo4.jpg" alt="Queen M photo 4">
+      </div>
+    </div>
+    <footer>
+      For Queen M — Only for her eyes. 💖
+    </footer>
+  </div>
+
+  <script>
+    function unlockSite() {
+      const password = document.getElementById('password').value;
+      const correctPassword = 'queenmonly'; // Change this to your real password
+      if (password === correctPassword) {
+        document.getElementById('lockscreen').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      } else {
+        alert('Wrong password, try again 😘');
+      }
+    }
+  </script>
+</body>
+</html>
